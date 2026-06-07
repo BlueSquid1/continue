@@ -10,7 +10,7 @@ docker run -it --rm -v "$(pwd):$(pwd)" -w "$(pwd)" node /bin/bash ./build.sh
 
 ## Things I have learnt reading this repo:
 
-- Why does keep on reprompting the LLM when I do a force autocomplete? - debounce is activated. Could solve by increasing debounce
+- Why does it keep on reprompting the LLM when I do a force autocomplete? - debounce is activated. Could solve by increasing debounce
 - Why does my autocomplete keep on cancelling? it's because the model timeout keeps on occuring. Can increase the number in the agents yaml file.
 - How can I make it only trigger from a keyboard shortcut? - can set the debounce it the max value of 2147483647
 - Why does it keep on generating after finishing the prompt? - this is the LLM fault. It's not the best at working out when it should stop.
