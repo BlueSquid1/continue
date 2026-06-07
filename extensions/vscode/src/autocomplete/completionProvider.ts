@@ -331,6 +331,7 @@ export class ContinueCompletionProvider
       // Determine why this method was triggered.
       const isJumping = this.jumpManager.isJumpInProgress();
       let chainExists = this.nextEditProvider.chainExists();
+      chainExists = false;
       const processedCount = this.prefetchQueue.processedCount;
       const unprocessedCount = this.prefetchQueue.unprocessedCount;
       // console.debug("isJumping:", isJumping, "/ chainExists:", chainExists);

@@ -245,11 +245,6 @@ export class CompletionProvider {
           completion += update;
         }
 
-        // Don't postprocess if aborted
-        if (token.aborted) {
-          return undefined;
-        }
-
         const processedCompletion = helper.options.transform
           ? postprocessCompletion({
               completion,

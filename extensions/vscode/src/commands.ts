@@ -580,6 +580,11 @@ const getCommandsMap: (
       await vscode.commands.executeCommand(
         "editor.action.inlineSuggest.trigger",
       );
+
+      // 3. Because VSCode will cancel if takes too long. retrigger as the second time it will be cached.
+      await vscode.commands.executeCommand(
+        "editor.action.inlineSuggest.trigger",
+      );
     },
 
     "continue.openTabAutocompleteConfigMenu": async () => {
